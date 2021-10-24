@@ -2,12 +2,12 @@ import { useState, ChangeEvent, FunctionComponent } from 'react'
 import { ITask } from './Interface'
 import './TodoList.css'
 
-interface ITodoProps {
+interface ITodoFormProps {
   todoList: ITask[]
   setTodoList: React.Dispatch<React.SetStateAction<ITask[]>>;
 }
 
-const TodoForm: FunctionComponent<ITodoProps> = (props) => {
+const TodoForm: FunctionComponent<ITodoFormProps> = (props) => {
   const { todoList, setTodoList } = props;
   const [task, setTask] = useState<string>("")
   const [id, setId] = useState<number>(1)
