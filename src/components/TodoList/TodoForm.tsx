@@ -17,16 +17,21 @@ const TodoForm: FunctionComponent<ITodoFormProps> = (props) => {
     setTask(event.target.value)
   }
   const AddTask = () => {
-    setId(id + 1) // a new id is created for each new task
-    const newTask = { 
-      id,
-      task
+    if(task) {
+      setId(id + 1) // a new id is created for each new task
+      const newTask = { 
+        id,
+        task
+      }
+      setTodoList([
+        ...todoList,
+        newTask
+      ])
+      setTask("")
     }
-    setTodoList([
-      ...todoList,
-      newTask
-    ])
-    setTask("")
+    else {
+      alert("Please enter a task")
+    }
   }
 
   return (
