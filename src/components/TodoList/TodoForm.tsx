@@ -6,6 +6,7 @@ interface ITodoFormProps {
   todoList: ITask[]
   setTodoList: React.Dispatch<React.SetStateAction<ITask[]>>;
 }
+// we got the required data with interface from TodoList
 
 const TodoForm: FunctionComponent<ITodoFormProps> = (props) => {
   const { todoList, setTodoList } = props;
@@ -16,8 +17,8 @@ const TodoForm: FunctionComponent<ITodoFormProps> = (props) => {
     setTask(event.target.value)
   }
   const AddTask = () => {
-    setId(id + 1)
-    const newTask = {
+    setId(id + 1) // a new id is created for each new task
+    const newTask = { 
       id,
       task
     }

@@ -5,8 +5,8 @@ import Todo from './Todo'
 import Compiled from './Compiled'
 
 function TodoList() {
-  const [todoList, setTodoList] = useState<ITask[]>([])
-  const [compiledList, setCompiledList] = useState<ITask[]>([])
+  const [todoList, setTodoList] = useState<ITask[]>([]) // task list created
+  const [compiledList, setCompiledList] = useState<ITask[]>([]) // list created for completed tasks
 
   return (
     <div>

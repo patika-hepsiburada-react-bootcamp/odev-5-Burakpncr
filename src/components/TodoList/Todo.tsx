@@ -14,7 +14,7 @@ const Todo:FunctionComponent<ITodoProps> = (props) => {
   const {todo,todoList,setTodoList,compiledList,setCompiledList} = props;
   
   const DeleteTask = (id : number) => {
-    setTodoList(todoList.filter((_, i) => i !== id - 1))
+    setTodoList(todoList.filter((_, i) => i !== id - 1)) // the selected task has been deleted from the list
   }
 
   const AddCompiled = (id:number, task: string) => {
@@ -23,7 +23,8 @@ const Todo:FunctionComponent<ITodoProps> = (props) => {
        id,
        task
       }
-      setCompiledList([...compiledList,CompiledTask])
+      setCompiledList([...compiledList,CompiledTask]) // the selected task has been added to the list
+      
   }
   return (
     <div key = {todo.id}>
